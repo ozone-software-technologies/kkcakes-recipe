@@ -40,7 +40,7 @@ async function runTest() {
         // 2. Test Production - Try to produce 2 Liters of Batter (Requires 2000g Flour, but we only have 1500g). Expect Failure.
         console.log('--- Testing Production (Insufficient Stock) ---');
         let resData: any = null;
-        let resStatus = 0;
+        let resStatus: any = 0;
         let mockRes = {
             status: (code: number) => { resStatus = code; return mockRes; },
             json: (data: any) => { resData = data; return mockRes; }
